@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+@font-face {
+  font-family: feFont;
+  src: url(/fonts/FE-FONT.TTF);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #242424;
+}
+
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #141417;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+}
+.loginContainer form h1{
+  color: white;
+  font-size: 1.4rem;
+  margin: 0;
+}
+.loginContainer form p{
+  color: white;
+  font-size: 0.8rem;
+  margin: 0;
+}
+.loginContainer form p a{
+  text-decoration: none;
+  color: #ff8200;
+  font-weight: bold;
+}
+.loginContainer form img {
+  width: 100px;
+}
+.loginContainer form input:not([type="submit"]), select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #242424;
+  height: 30px;
+  padding: 0 4px 0 4px;
+  color: white;
+  border: 2px solid #242424;
+  border-radius: 4px;
+  transition: 0.25s;
+}
+.loginContainer form input:not([type="submit"]):focus, select {
+  border-color: rgb(255, 130, 0);
+}
+
+.loginContainer form input[type="submit"] {
+  outline: none;
+  border: none;
+  background-color: #ff8200;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.loginContainer form input[type="submit"]:hover {
+  background-color: rgb(223, 116, 2);
+}
+
+.placa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/placa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "feFont", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 15px;
+  letter-spacing: 4px;
+  min-height: 120px;
+  min-width: 300px;
+  max-height: 120px;
+  max-width: 300px;
+  margin-right: -4px;
+}
+
+.map{
+  height: 300px;
+  width: 300px;
+}
+
+.valores{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.valores .valorContent{
+  background-color: #242424;
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:wght@700&display=swap");
+@font-face {
+  font-family: feFont;
+  src: url(/fonts/FE-FONT.TTF);
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #242424;
+}
+
+header {
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #141417;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px 0 30px;
+  position: fixed;
+  gap: 4px;
+}
+header a {
+  text-decoration: none;
+  outline: none;
+  color: #ff8200;
+  border: 2px solid #ff8200;
+  padding: 4px 15px 4px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.25s;
+}
+
+header a:hover {
+  color: white;
+  background-color: #ff8200;
+}
+
+.vehiclesContainer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vehicle {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #141417;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.vehicle .placa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/placa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "feFont", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 15px;
+  letter-spacing: 4px;
+  min-height: 120px;
+  min-width: 300px;
+  max-height: 120px;
+  max-width: 300px;
+  margin-right: -4px;
+}
+
+.vehicle a,
+.plusBtn {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: #ff8200;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.vehicle a :hover,
+.plusBtn:hover {
+  background-color: rgb(223, 116, 2);
+}
+
+.plusBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  .vehicle {
+    flex-direction: column;
+  }
+}

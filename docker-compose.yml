@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  web-server:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "./www/:/var/www/html/"
+    ports:
+      - "3000:80"
+    links:
+      - mysql-server
+  mysql-server:
+    image: mysql:8.0.19
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./db.sql:/docker-entrypoint-initdb.d/entrevista_init.sql"
+volumes:
+  mysql-data: null

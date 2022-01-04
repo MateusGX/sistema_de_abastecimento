@@ -42,15 +42,27 @@ header a:hover {
   color: white;
   background-color: #ff8200;
 }
+.contentMain {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleAbs {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
 .loginContainer {
   min-height: 100vh;
+  padding: 50px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .loginContainer form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -58,17 +70,17 @@ header a:hover {
   padding: 10px 20px 10px 20px;
   border-radius: 4px;
 }
-.loginContainer form h1{
+.loginContainer form h1 {
   color: white;
   font-size: 1.4rem;
   margin: 0;
 }
-.loginContainer form p{
+.loginContainer form p {
   color: white;
   font-size: 0.8rem;
   margin: 0;
 }
-.loginContainer form p a{
+.loginContainer form p a {
   text-decoration: none;
   color: #ff8200;
   font-weight: bold;
@@ -76,7 +88,8 @@ header a:hover {
 .loginContainer form img {
   width: 100px;
 }
-.loginContainer form input:not([type="submit"]), select {
+.loginContainer form input:not([type="submit"]),
+select {
   width: 100%;
   border: none;
   outline: none;
@@ -88,12 +101,13 @@ header a:hover {
   border-radius: 4px;
   transition: 0.25s;
 }
-select{
+select {
   font-size: 24px;
   height: 50px;
 }
 
-.loginContainer form input:not([type="submit"]):focus, select {
+.loginContainer form input:not([type="submit"]):focus,
+select {
   border-color: rgb(255, 130, 0);
 }
 
@@ -132,19 +146,20 @@ select{
   margin-right: -4px;
 }
 
-.map{
+.map {
   height: 300px;
-  width: 300px;
+  width: 100%;
+  border-radius: 4px;
 }
 
-.valores{
+.valores {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 5px;
 }
 
-.valores .valorContent{
+.valores .valorContent {
   background-color: #242424;
   height: 30px;
   width: 100%;

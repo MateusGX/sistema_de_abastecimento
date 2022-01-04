@@ -10,7 +10,7 @@ $connection = BancoDeDados::Connect();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -23,6 +23,7 @@ $connection = BancoDeDados::Connect();
 <body>
   <header>
     <a href="/dashboard/vehicle.php?create">Adicionar Veículo</a>
+    <a href="/dashboard/conta.php">Conta</a>
     <a href="/auth/signout.php">Sair</a>
   </header>
   <main class="vehiclesContainer">

@@ -17,7 +17,7 @@ if ($_SESSION['page'] != 'login' && $_SESSION['page'] != 'signup') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">

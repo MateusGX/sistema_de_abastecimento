@@ -17,6 +17,16 @@ if (
   } else {
     header("Location: /error.php");
   }
+} else if (
+  !empty($_GET['id']) && isset($_GET['active'])
+) {
+  $connection = BancoDeDados::Connect();
+  $result = Abastecimento::Desactive($connection, $_GET['id']);
+  if ($result) {
+    header("Location: /dashboard.php");
+  } else {
+    header("Location: /error.php");
+  }
 } else {
   header("Location: /error.php");
 }

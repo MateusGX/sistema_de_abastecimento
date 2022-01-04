@@ -18,6 +18,7 @@ CREATE TABLE `abastecimento` (
   `valor_por_litro` decimal(6,2) NOT NULL,
   `latitude` double NOT NULL,
   `longitude` double NOT NULL,
+  `active` boolean NOT NULL DEFAULT true,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -49,6 +50,7 @@ CREATE TABLE `veiculo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(100) DEFAULT NULL,
   `placa` varchar(20) NOT NULL,
+  `active` boolean NOT NULL DEFAULT true,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

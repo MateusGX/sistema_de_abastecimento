@@ -52,39 +52,54 @@ header a:hover {
   gap: 5px;
 }
 
-.vehicle {
+.vehiclesContainer .tableDiv {
+  width: 100%;
   padding: 10px;
   border-radius: 4px;
   background-color: #141417;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
-.vehicle .actions {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "activeBtn editBtn"
-    "abastecimentoBtn abastecimentoBtn";
-    grid-gap: 10px;
+.vehiclesContainer .tableDiv .row {
+  background-color: #414141;
 }
 
-.vehicle .actions a:nth-child(1) {
-  grid-area: abastecimentoBtn;
-}
-.vehicle .actions a:nth-child(2) {
-  grid-area: activeBtn;
-}
-.vehicle .actions a:nth-child(3) {
-  grid-area: editBtn;
+.vehiclesContainer .tableDiv .row:nth-child(2n) {
+  background-color: #242424;
 }
 
-.vehicle .placa {
+.vehiclesContainer .tableDiv .titleRow{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  font-size: 1.4rem;
+}
+
+.vehiclesContainer .tableDiv .titleRow p{
+  margin: 0;
+}
+
+.vehiclesContainer .tableDiv .row {
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.vehiclesContainer .tableDiv .row .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.vehiclesContainer .tableDiv .row .placa {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,8 +117,7 @@ header a:hover {
   max-width: 300px;
 }
 
-.vehicle a,
-.plusBtn {
+.vehiclesContainer .tableDiv .row .actions a {
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -116,25 +130,23 @@ header a:hover {
   transition: 0.25s;
 }
 
-.vehicle a :hover,
-.plusBtn:hover {
+.vehiclesContainer .tableDiv .row .actions a:hover{
   background-color: rgb(223, 116, 2);
 }
 
-.plusBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  width: 200px;
-}
 
 @media only screen and (max-width: 600px) {
   header a {
     font-size: 0.8rem;
     text-align: center;
   }
-  .vehicle {
-    width: 100%;
+  .vehiclesContainer .tableDiv .row {
+    justify-content: center;
+  }
+  .vehiclesContainer .tableDiv .row .actions a {
+    flex: 1;
+  }
+  .vehiclesContainer .tableDiv .titleRow p:last-child{
+    display: none;
   }
 }

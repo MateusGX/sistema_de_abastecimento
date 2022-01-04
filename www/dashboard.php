@@ -27,9 +27,15 @@ $connection = BancoDeDados::Connect();
     <a href="/auth/signout.php">Sair</a>
   </header>
   <main class="vehiclesContainer">
-    <?php
-    echo Vehicle::GetAll($connection);
-    ?>
+    <div class="tableDiv">
+      <div class="titleRow">
+        <p>Placa</p>
+        <p>Ações</p>
+      </div>
+      <?php
+      echo Vehicle::GetAll($connection);
+      ?>
+    </div>
   </main>
 </body>
 

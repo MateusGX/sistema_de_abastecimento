@@ -64,7 +64,14 @@ class Vehicle
     $result = $stmt->get_result();
     $html = "";
     while ($row = mysqli_fetch_assoc($result)) {
-      $html .= "<div class=\"vehicle\"><div class=\"placa\">{$row['placa']}</div><div class=\"actions\"><a href=\"/dashboard/vehicle.php?view={$row['id']}\">ABASTECIMENTO</a><a href=\"/dashboard/vehicle.php?edit={$row['id']}\">EDITAR</a><a href=\"/api/vehicle.php?active&id={$row['id']}\">DESATIVAR</a></div></div>";
+      $html .= "<div class=\"row\">
+        <div class=\"placa\">{$row['placa']}</div>
+        <div class=\"actions\">
+          <a href=\"/dashboard/vehicle.php?view={$row['id']}\">ABASTECIMENTO</a>
+          <a href=\"/dashboard/vehicle.php?edit={$row['id']}\">EDITAR</a>
+          <a href=\"/api/vehicle.php?active&id={$row['id']}\">DESATIVAR</a>
+        </div>
+    </div>";
     }
     $stmt->close();
     return $html;
